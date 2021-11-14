@@ -1,0 +1,25 @@
+def minsum(pairs):
+    min_sum = 0
+    min_diff = None
+
+    for pair in pairs:
+        min_sum += min(pair)
+        diff = abs(pair[1] - pair[0])
+
+        if (diff % 3) and ((min_diff is None) or (diff < min_diff)):
+            min_diff = diff
+
+    if min_sum % 3:
+        return min_sum
+
+    if min_diff is not None:
+        return min_sum - min_diff
+
+
+res = []
+f = open("27-43b.txt", 'r')
+f[
+for line in f:
+    res.append(list(map(int, line.split())))
+
+print(minsum(res))

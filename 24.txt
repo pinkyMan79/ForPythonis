@@ -1,0 +1,13 @@
+def isprime(n):
+    d = 2
+    while d * d <= n:
+        if n % d == 0:
+            return False
+        d += 1
+    return True
+
+
+for i in range(106000000, 107000000, 2):
+    if (i // 2) ** 0.5 == int((i // 2) ** 0.5):
+        if isprime((i // 2) ** 0.5):
+            print(i)

@@ -1,0 +1,55 @@
+f = open("27_A (1).txt", 'r')
+v = int(f.readline())
+m = 0
+mindels = [9999] * 8
+
+for i in range(0, v):
+    s = f.readline().split(" ")
+    n1 = int(s[0])
+    n2 = int(s[1])
+    n3 = int(s[2])
+    m += max(n1, n2, n3)
+
+    if mindels[0] > min(abs(n1 - n2), abs(n2 - n3), abs(n1 - n3)) and min(abs(n1 - n2), abs(n2 - n3),
+                                                                          abs(n1 - n3)) % 8 == 1:
+        mindels[0] = min(abs(n1 - n2), abs(n2 - n3), abs(n1 - n3))
+    if mindels[1] > min(abs(n1 - n2), abs(n2 - n3), abs(n1 - n3)) and min(abs(n1 - n2), abs(n2 - n3),
+                                                                          abs(n1 - n3)) % 8 == 2:
+        mindels[1] = min(abs(n1 - n2), abs(n2 - n3), abs(n1 - n3))
+    if mindels[2] > min(abs(n1 - n2), abs(n2 - n3), abs(n1 - n3)) and min(abs(n1 - n2), abs(n2 - n3),
+                                                                          abs(n1 - n3)) % 8 == 3:
+        mindels[2] = min(abs(n1 - n2), abs(n2 - n3), abs(n1 - n3))
+    if mindels[3] > min(abs(n1 - n2), abs(n2 - n3), abs(n1 - n3)) and min(abs(n1 - n2), abs(n2 - n3),
+                                                                          abs(n1 - n3)) % 8 == 4:
+        mindels[3] = min(abs(n1 - n2), abs(n2 - n3), abs(n1 - n3))
+    if mindels[4] > min(abs(n1 - n2), abs(n2 - n3), abs(n1 - n3)) and min(abs(n1 - n2), abs(n2 - n3),
+                                                                          abs(n1 - n3)) % 8 == 5:
+        mindels[4] = min(abs(n1 - n2), abs(n2 - n3), abs(n1 - n3))
+    if mindels[5] > min(abs(n1 - n2), abs(n2 - n3), abs(n1 - n3)) and min(abs(n1 - n2), abs(n2 - n3),
+                                                                          abs(n1 - n3)) % 8 == 6:
+        mindels[5] = min(abs(n1 - n2), abs(n2 - n3), abs(n1 - n3))
+    if mindels[6] > min(abs(n1 - n2), abs(n2 - n3), abs(n1 - n3)) and min(abs(n1 - n2), abs(n2 - n3),
+                                                                          abs(n1 - n3)) % 8 == 7:
+        mindels[6] = min(abs(n1 - n2), abs(n2 - n3), abs(n1 - n3))
+    if mindels[7] > min(abs(n1 - n2), abs(n2 - n3), abs(n1 - n3)) and min(abs(n1 - n2), abs(n2 - n3),
+                                                                          abs(n1 - n3)) % 8 == 0:
+        mindels[7] = min(abs(n1 - n2), abs(n2 - n3), abs(n1 - n3))
+
+if m % 8 == 0:
+    print(m)
+if m % 8 == 1:
+    print(m - mindels[0])
+if m % 8 == 2:
+    print(m - mindels[1])
+if m % 8 == 3:
+    print(m - mindels[2])
+if m % 8 == 4:
+    print(m - mindels[3])
+if m % 8 == 5:
+    print(m - mindels[4])
+if m % 8 == 6:
+    print(m - mindels[5])
+if m % 8 == 7:
+    print(m - mindels[6])
+
+print(m)
