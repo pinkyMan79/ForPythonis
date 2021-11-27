@@ -101,12 +101,13 @@ n = int(input())
 a = []
 
 for i in range(n):
-    a.append(int(input()))
+    ad = int(input())
+    a.append(ad)
 
-for i in range(0, len(a)):
+for i in range(0, n//2):
     t = a[i]
-    a[i] = a[n - i]
-    a[n - i] = t
+    a[i] = a[n - i - 1]
+    a[n - i - 1] = t
 
 print(a)
 
