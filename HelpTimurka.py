@@ -137,7 +137,7 @@ def sov(n):
     a = []
     sum = 0
     for i in range(n):
-        if n % i == 0:
+        if n % i == 0 and i > 0:
             a.append(i)
     for i in a:
         sum += i
