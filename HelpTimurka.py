@@ -121,7 +121,12 @@ for i in range(n):
     for j in range(n):
         matrix[i].append(int(input()))
 
-mat2 = matrix
+mat2 = []
+
+for i in range(n):
+    mat2.append([])
+    for j in range(n):
+        mat2[i].append(0)
 
 for i in range(n):
     for j in range(n):
