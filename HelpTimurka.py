@@ -50,7 +50,7 @@ def checkForFile(fileName, f):
             yield from checkForFile(fileName, element.path)
 
 
-fName = (str(input()) + '.py') + ''
+fName = (str(input())) + ''
 print(*checkForFile(fName, os.getcwd()))
 
 # 2 Console
@@ -90,3 +90,43 @@ while (True):
     elif inp == "exit":
         print("bye")
         break
+
+
+#3 Cjntrol work
+
+#2
+
+n = int(input())
+
+a = []
+
+for i in range(n):
+    a.append(int(input()))
+
+for i in range(0, len(a)):
+    t = a[i]
+    a[i] = a[n - i]
+    a[n - i] = t
+
+print(a)
+
+# 3
+
+n = int(input())
+
+matrix = []
+
+for i in range(n):
+    matrix.append([])
+    for j in range(n):
+        matrix[i].append(int(input()))
+
+mat2 = []
+
+for i in range(n):
+    mat2.append([])
+    for j in range(n):
+        mat2[i].append(matrix[i][j] + matrix[i][j + 1])
+
+for i in range(n):
+    print(mat2[i])
